@@ -1,0 +1,27 @@
+def caesar_cipher(text, shift, mode="encrypt"):
+    result = ""  # Initialize an empty string to store the final result
+
+    for char in text:  # Loop through each character in the input text
+        if char.isalpha():  # Check if the character is a letter (ignore numbers and symbols)
+            shift_amount = shift if mode == "encrypt" else -shift  # Determine shift direction
+            ascii_offset = 65 if char.isupper() else 97  # Set ASCII offset (A=65, a=97)
+
+            # Shift character within alphabet range using modular arithmetic
+            new_char = chr(((ord(char) - ascii_offset + shift_amount) % 26) + ascii_offset)
+            result += new_char  # Append new character to the result
+        else:
+            result += char  # If not a letter, keep the character unchanged
+
+    return result  # Return the encrypted or decrypted text
+
+# Get user input
+word = input("Enter a word to encrypt: ")  # Ask the user for a word
+shift = int(input("Enter shift value: "))  # Ask the user for a shift value (integer)
+
+# Encrypt the word
+encrypted = caesar_cipher(word, shift, mode="encrypt")  # Encrypt the input word
+print(f"Encrypted: {encrypted}")  # Display the encrypted word
+
+# Decrypt the word
+decrypted = caesar_cipher(encrypted, shift, mode="decrypt")  # Decrypt the encrypted word
+print(f"Decrypted: {decrypted}")  # Display the original word after decryption
