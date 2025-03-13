@@ -1,0 +1,43 @@
+body{
+    background-color: lightpink;   
+}
+form{
+    background-color: white;
+    border: 10px solid purple;
+}
+h1{
+    background-color: yellow;
+    border: 2px solid black;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    color: blue;
+}
+input[type="text"]{
+    background-color: brown;
+    border: 2px solid black;
+    color: white;
+}
+button{
+    background-color: pink;
+    border: 1px solid black;
+    font-weight: bold;
+}
+/* to change button color when hovered */
+button:hover{
+    background-color: darkred;
+}
+th{
+    background-color: green;
+    border: 2px solid black; /* to make black border */
+}
+tr:nth-child(odd){ /* to change color of odd rows */
+    background-color: lightgreen;
+}
+tr:nth-child(even){ /* to change color of even rows */
+    background-color: lightblue;
+}
+table{
+    border: 5px solid blue;
+}

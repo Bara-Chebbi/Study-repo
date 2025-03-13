@@ -1,0 +1,28 @@
+body{
+    background-color: #f0f8ff;
+}
+fieldset{
+    background-color: white; 
+    border: 2px solid gray; /* add a border around the fieldset */
+    border-radius: 10px; /* round the corners */
+    padding: 10px; /*add some space inside the fieldset */
+}
+legend{
+    font-weight: bold; /* make the legend bold */
+}
+label{
+    font-weight: bold; /* make the label bold */
+}
+input[type="text"]{
+    width: 100%; /* make the text input full width */
+    background-color: yellow;
+    border: 2px solid black; /* add a border around the text input */
+}
+button{
+    background-color: pink; /* make the button pink */
+    border: 1px solid black; /* add a border around the button */
+    font-weight: bold; /* make the button bold */
+}
+button:hover{
+    background-color: darkred; /* change button color when hovered */
+}
